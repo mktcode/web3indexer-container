@@ -2,19 +2,11 @@ version: '3'
 services:
   web3indexer:
     container_name: web3indexer
-    depends_on:
-      - redis
-    build:
-      dockerfile: Dockerfile
-      context: .
+    build: .
     ports:
       - "3000:3000"
-    volumes:
-      - ./:/app
     env_file:
       - .env
   redis:
     container_name: redis
     image: redis:7.0.7-alpine
-    ports:
-      - "6378:6378"

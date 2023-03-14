@@ -1,6 +1,6 @@
 export function endpoint(db) {
   return async (_req, res) => {
-    const cached = await db.hGetAll('users');
+    const cached = await db.hGetAll('unlocked');
   
     if (cached) {
       Object.keys(cached).forEach((key) => {
