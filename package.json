@@ -1,0 +1,16 @@
+{
+  "name": "web3indexer-containerized",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mktcodelib/web3indexer": "^0.2.3"
+  }
+}
