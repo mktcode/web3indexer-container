@@ -2,7 +2,13 @@ import { Web3Indexer } from '@mktcodelib/web3indexer';
 import { endpoint }  from './endpoint.js';
 import { listener }  from './listener.js';
 
-const indexer = new Web3Indexer({ provider: process.env.PROVIDER_URL, debug: true });
+const indexer = new Web3Indexer({
+  provider: process.env.PROVIDER_URL,
+  debug: true,
+  redisConfig: {
+    url: process.env.REDIS_URL,
+  }
+});
 
 const CONTRACT_ADDRESS = "0x8cdf190266efe40A456314142A10C6EeAd9Dc900";
 const CONTRACT_ABI = [ "event Unlock(address indexed user, uint256 amount)" ];
